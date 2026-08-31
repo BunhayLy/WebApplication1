@@ -1,0 +1,17 @@
+﻿@model WebApplication1.Models.AgeCalculatorViewModel
+
+<h1>Age Calculator</h1>
+
+<form method="post">
+    <p>
+        Enter Birth Year:
+        <input asp-for="BirthYear" />
+    </p>
+
+    <button type="submit">Calculate Age</button>
+</form>
+
+@if (Model.Age.HasValue)
+{
+    <h3>Your age is approximately @Model.Age years.</h3>
+}
